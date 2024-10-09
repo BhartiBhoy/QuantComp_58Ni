@@ -180,7 +180,7 @@ def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_ma
             Base_WFs,V,KE = Hamiltonian_M_scheme(levels,energies,M,Interaction_Dict,Qubit_map)
             for i,base in enumerate(Base_WFs):
                 kE_sp=energies[base[5]]+energies[base[11]]
-
+                V[i,i] += kE_sp
             Qbit_bases=[]
             for base in Base_WFs:
                 n1,l1,j1,jz1,tz1,n2,l2,j2,jz2,tz2 = base[0],base[1],base[2],base[3],base[4],base[6],base[7],base[8],base[9],base[10]
