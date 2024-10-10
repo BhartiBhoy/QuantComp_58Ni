@@ -5,11 +5,15 @@ from shell_model_Ni58.JW_mapping.jw_mapping import Save_Energy_Optimaztion_loop
 
 import numpy as np
 
+import getopt, sys
 
 
 model_filename='model_space.in'
 interaction_filename = 'jun45_pf.int'
 output_file_for_qmapped_H='Qbit_mapped_all_M_JUN45.out'
+
+
+Optimizers=('COBYLA','SPSA','SLSQP','GradientDescent')
 
 state=0 # ground state
 # state=1 # 1st excited state
@@ -20,22 +24,53 @@ Optimizer_name = 'COBYLA'
 # Optimizer_name = 'SLSQP'
 # Optimizer_name = 'GradientDescent'
 
+
 output_fig_path='Figures'
 output_data_path='Data_output'
 reference_value=None
+
+
+
+if len(sys.argv)>1:
+    argumentList = sys.argv[1:]
+    options = "s:o:"
+    long_options = ["state", "optimizer"]
+    try:
+        # Parsing argument
+        arguments, values = getopt.getopt(argumentList, options, long_options)
+        # checking each argument
+        for currentArgument, currentValue in arguments:
+            if currentArgument in ("-s", "--state"):
+                # print ("state: ",currentValue)
+                state = int(currentValue)
+            elif currentArgument in ("-o", "--optimizer"):
+                # print ("optimizer:", currentValue)
+                if currentValue in Optimizers:
+                    Optimizer_name=currentValue
+                else:
+                    raise IndexError    
+    except getopt.error as err:
+        print (str(err))
+    except IndexError:
+        print('Wrong optimizer name reverting to default value (COBYLA)')
+    except ValueError:
+        print('Wrong data type for -s or -o, reverting to default values state=0 and optimizer = COBYLA')
+
+
+States={0:'Ground',1:'First Excited',2:'Second Excited'}
+print('----------------------------------------')
+print(f'{States[state]} state calculations')
+print(f'The Optimizer chosen is {Optimizer_name}')
+print('------------------------------------------')
 
 levels,energies=Read_model_space(model_filename)
 
 M_vals=All_Ms(levels)
 
-# print(M_vals)
-
 Interaction_Dict=Read_interaction_J(interaction_filename,levels)
 
-# print(Interaction_Dict)
 Qubit_map = Create_Qmap(levels)
 
-# print(Qubit_map)
 Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_map,output_file_for_qmapped_H)
 
 Hamiltonian_Coeff,N_qbits = Read_m_scheme_H(m_scheme_H_filename=output_file_for_qmapped_H,levels=levels,energies=energies)
