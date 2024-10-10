@@ -34,7 +34,7 @@ reference_value=None
 if len(sys.argv)>1:
     argumentList = sys.argv[1:]
     options = "s:o:"
-    long_options = ["state", "optimizer"]
+    long_options = ["state=", "optimizer="]
     try:
         # Parsing argument
         arguments, values = getopt.getopt(argumentList, options, long_options)
