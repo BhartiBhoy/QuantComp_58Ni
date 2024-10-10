@@ -170,11 +170,11 @@ def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_ma
         f.write('________________________________________________\n')
         f.write('Qubit mapped matrix elements of V All M \n')
         print('________________________________________________\n')
-        print('Qubit mapped matrix elements of V All M \n')
+        # print('Qubit mapped matrix elements of V All M \n')
 
         countM=0
         for M in M_vals:
-            print(M)
+            # print(M)
 
             '''Getting the m-scheme basis and the Hamiltonian'''
             Base_WFs,V,KE = Hamiltonian_M_scheme(levels,energies,M,Interaction_Dict,Qubit_map)
@@ -196,7 +196,7 @@ def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_ma
             for i,qbit_base1 in enumerate(Qbit_bases):
                 for j,qbit_base2 in enumerate(Qbit_bases):
                     if abs(V[i,j])>0:
-                        print(qbit_base1[0],qbit_base1[1],qbit_base2[0],qbit_base2[1],'  ',V[i,j])
+                        # print(qbit_base1[0],qbit_base1[1],qbit_base2[0],qbit_base2[1],'  ',V[i,j])
                         f.write('   %d\t%d\t%d\t%d\t\t%f \n'%(qbit_base1[0],qbit_base1[1],qbit_base2[0],qbit_base2[1],V[i,j]))
                         # f.write('   %d\t%d\t%d\t%d\t\t%f \n'%(qbit_map_trans[qbit_base1[0]],qbit_map_trans[qbit_base1[1]],qbit_map_trans[qbit_base2[0]],qbit_map_trans[qbit_base2[1]],V[i,j]))
                         countM+=1
@@ -207,10 +207,10 @@ def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_ma
         f.write('\n')
         f.write('________________________________________________\n')
         f.write('Qubit mapped matrix elements of KE all M \n')
-        print('________________________________________________\n')
-        print('Qubit mapped matrix elements of KE for All M \n')
+        # print('________________________________________________\n')
+        # print('Qubit mapped matrix elements of KE for All M \n')
         for M in M_vals:
-            print(M)
+            # print(M)
 
             '''Getting the m-scheme basis and the Hamiltonian'''
             Base_WFs,V,KE = Hamiltonian_M_scheme(levels,energies,M,Interaction_Dict,Qubit_map)
@@ -227,6 +227,6 @@ def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_ma
                 Qbit2 = Qubit_map[key2]
                 Qbit_bases.append([Qbit1,Qbit2])
             for i,qbit_base1 in enumerate(Qbit_bases):
-                print(qbit_base1[0],qbit_base1[1],qbit_base1[0],qbit_base1[1],'  ',KE[i,i])
+                # print(qbit_base1[0],qbit_base1[1],qbit_base1[0],qbit_base1[1],'  ',KE[i,i])
                 f.write('   %d\t%d\t%d\t%d\t\t%f \n'%(qbit_base1[0],qbit_base1[1],qbit_base1[0],qbit_base1[1],KE[i,i]))
         f.write('End KE')
