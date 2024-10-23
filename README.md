@@ -45,7 +45,7 @@ The code in this repository implements the following steps:
    python main.py
    ```
    By default it will calculate for the ground state and will use the COBYLA optimizer. 
-   To select a different excited state and different optimizer (COBYLA, SPSA, SLSQP, GradientDescent), there are some flags that can be used as follows:
+   To select a different excited state and different optimizer (COBYLA, SPSA, SLSQP, GradientDescent), there are flags that can be used as follows:
    ```bash
    python main.py --state 1 --optimizer GradientDescent
    or
