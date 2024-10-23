@@ -9,15 +9,8 @@ The primary goal is to calculate the low-lying energy levels (ground and excited
 - **Quantum Algorithm**: We use the VQE, a hybrid quantum-classical algorithm, to minimize the energy expectation value of the 58Ni Hamiltonian and compute its ground and excited state energies.
 - **Ansatz**: The wavefunction ansatz is specifically tailored for the 58Ni nucleus to represent the desired quantum states (ground, first, and second excited states).
 - **Qubit Mapping**: Fermionic creation and annihilation operators are mapped onto qubits using the Jordan-Wigner transformation. Each qubit corresponds to a particular nuclear state in the shell model.
-- **Optimization**: Classical optimization algorithms like COBYLA and SLSQP are used to adjust the ansatz parameters and minimize the Hamiltonian.
+- **Optimization**: Optimization algorithms like COBYLA, SLSQP, SPSA and Gradient-Descent are used to adjust the ansatz parameters and minimize the Hamiltonian.
 
-## Code Overview
-The code in this repository implements the following steps:
-1. **Ansatz Construction**: A problem-specific ansatz is prepared for the 58Ni nucleus, including Pauli X gates and excitation gates for the ground and excited states.
-2. **Qubit Mapping**: Nuclear states are mapped to qubits using the Jordan-Wigner transformation.
-3. **VQE Algorithm**: The VQE algorithm is used to calculate the energy of the system by minimizing the expectation value of the Hamiltonian.
-4. **Optimization**: Classical optimizers such as COBYLA and SLSQP are used to find the optimal parameters for the ansatz.
-5. **Comparison with Classical Models**: The results obtained from quantum simulations are compared with classical shell model calculations to ensure accuracy.
 
 ## Results
 - The VQE simulation accurately reproduces the ground state and first and second excited state energies of 58Ni.
