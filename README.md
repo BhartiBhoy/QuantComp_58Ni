@@ -25,7 +25,7 @@ The code in this repository implements the following steps:
 - The study demonstrates the potential of quantum computing in nuclear physics, particularly in nuclear structure studies.
 
 ## Dependencies
-- Python 3.x
+- Python 3.11
 - Qiskit
 - Numpy
 - Matplotlib

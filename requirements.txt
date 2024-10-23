@@ -1,5 +1,4 @@
-numpy=1.26.4
-matplotlib
 qiskit==0.43.1
 qiskit-nature==0.6.2
 SciencePlots
+pylatexenc
