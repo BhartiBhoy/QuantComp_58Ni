@@ -1,6 +1,4 @@
-## Shell-model study of $^{58}\text{Ni}$ using quantum computing algorithm
-
-# Shell-Model Study of 58Ni Using Quantum Computing
+# Shell-model study of $^{58}\text{Ni}$ using quantum computing algorithm
 
 This repository contains the code used for the study of energy levels in the 58Ni nucleus, using quantum computing techniques. Specifically, we utilize the Variational Quantum Eigensolver (VQE) algorithm in combination with a problem-specific ansatz. This study demonstrates how quantum algorithms can be applied to nuclear structure studies and compares results with classical shell model computations.
 
