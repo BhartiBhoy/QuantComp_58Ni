@@ -27,7 +27,7 @@ The primary goal is to calculate the low-lying energy levels (ground and excited
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/BhartiBhoy/58Ni_SM_VQE.git
+   git clone https://github.com/BhartiBhoy/QuantComp_58Ni.git
    ```
 2. Install the required dependencies:
    ```bash
