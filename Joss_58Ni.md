@@ -3,19 +3,19 @@
 authors:
   - name: Bharti Bhoy
     orcid: 0000-0003-0495-9916
-    equal-contrib: true
-    corresponding: true 
     affiliation: 1 
+  - name: Abhishek
+    orcid: 0000-0003-2226-3146
+    affiliation: 1
   - name: Paul Stevenson
     orcid: 0000-0003-2645-2569
-    equal-contrib: true 
+    corresponding: true  
     affiliation: 1
  
     
 affiliations:
  - name: Department of Physics, University of Surrey, Guildford, Surrey, GU2 7XH, United Kingdom
    index: 1
-date: 18 August 2024
 bibliography: paper.bib
 
 
