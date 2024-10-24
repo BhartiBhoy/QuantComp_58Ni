@@ -202,12 +202,25 @@ def Ensatz_second(Qbits,InitialState,Phis,Ground,Excite,double=True):
     
     return circ
 
+def Create_directory(directory_name):
+    # Create the directory
+    try:
+        os.mkdir(directory_name)
+        print(f"Directory '{directory_name}' created successfully.")
+    except FileExistsError:
+        print(f"Directory '{directory_name}' already exists.")
+    except PermissionError:
+        print(f"Permission denied: Unable to create '{directory_name}'.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 def Ansatz(N_Qbits,state,output_fig_path):
 
     current_dir=os.getcwd()
     
     full_path=os.path.join(current_dir,output_fig_path)
+
+    Create_directory(directory_name=full_path)
 
     if state==0:
         Parameters=[]
@@ -306,6 +319,8 @@ def Get_Wavefunction(theta0,N_Qbits,state, Optimizer_name,output_fig_path,output
     full_path=os.path.join(current_dir,output_fig_path)
 
     full_path_data = os.path.join(current_dir,output_data_path)
+    Create_directory(directory_name=full_path_data)
+    
     if state==0:
         minimum_circuit = Ensatz_ground(N_Qbits,[0,1],theta0)
         minimum_circuit.measure_all()
