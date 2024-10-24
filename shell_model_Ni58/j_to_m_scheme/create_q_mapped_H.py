@@ -145,11 +145,22 @@ def Create_Qmap(levels):
 
     return Qubit_map
 
-
+def Create_directory(directory_name):
+    # Create the directory
+    try:
+        os.mkdir(directory_name)
+        print(f"Directory '{directory_name}' created successfully.")
+    except FileExistsError:
+        print(f"Directory '{directory_name}' already exists.")
+    except PermissionError:
+        print(f"Permission denied: Unable to create '{directory_name}'.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_map,output_filename):
 
     current_dir=os.getcwd()
+    Create_directory(directory_name='q_mapped_H_output')
     path = os.path.join('shell_model_Ni58','q_mapped_H_output')
     full_path=os.path.join(os.path.join(current_dir,path),output_filename)
     Nuc_Tz = {0.5:'n',-0.5:'p'}
