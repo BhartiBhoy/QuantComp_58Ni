@@ -9,7 +9,7 @@ import os
 
 def Read_model_space(model_filename):
     current_dir=os.getcwd()
-    path = 'shell_model_Ni58/model_space'
+    path = os.path.join('shell_model_Ni58','model_space')
     full_path=os.path.join(os.path.join(current_dir,path),model_filename)
 
     with open(full_path, 'r') as f:
@@ -78,7 +78,7 @@ def Read_interaction_J(interaction_filename,levels):
         Correct_Qbit_map[val] = str(key)
     
     current_dir=os.getcwd()
-    path = 'shell_model_Ni58/interactions'
+    path = os.path.join('shell_model_Ni58','interactions')
     full_path=os.path.join(os.path.join(current_dir,path),interaction_filename)
     with open(full_path,'r') as f:
         
@@ -150,7 +150,7 @@ def Create_Qmap(levels):
 def Write_Qmapped_M_Hamiltonian(levels,energies,M_vals,Interaction_Dict,Qubit_map,output_filename):
 
     current_dir=os.getcwd()
-    path = 'shell_model_Ni58/q_mapped_H_Output'
+    path = os.path.join('shell_model_Ni58','q_mapped_H_output')
     full_path=os.path.join(os.path.join(current_dir,path),output_filename)
     Nuc_Tz = {0.5:'n',-0.5:'p'}
     ''' printing output in the output file'''
