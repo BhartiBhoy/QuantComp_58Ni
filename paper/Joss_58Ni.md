@@ -1,3 +1,5 @@
+---
+
 ## Shell-model study of <sup>58</sup>Ni  using quantum computing algorithm
 
 authors:
@@ -18,7 +20,7 @@ affiliations:
    index: 1
 bibliography: paper.bib
 
-
+---
 
 
 ## Summary
