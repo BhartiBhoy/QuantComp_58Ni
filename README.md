@@ -1,19 +1,19 @@
-# Shell-model study of $^{58}\text{Ni}$ using quantum computing algorithm
+# Shell-model study of <sup>58</sup>Ni  using quantum computing algorithm
 
-This repository contains the code used for the study of energy levels in the 58Ni nucleus, using quantum computing techniques. Specifically, we utilize the Variational Quantum Eigensolver (VQE) algorithm in combination with a problem-specific ansatz. This study demonstrates how quantum algorithms can be applied to nuclear structure studies and compares results with classical shell model computations.
+This repository contains the code used for the study of energy levels in the <sup>58</sup>Ni  nucleus, using quantum computing techniques. Specifically, we utilize the Variational Quantum Eigensolver (VQE) algorithm in combination with a problem-specific ansatz. This study demonstrates how quantum algorithms can be applied to nuclear structure studies and compares results with classical shell model computations.
 
 ## Objective
-The primary goal is to calculate the low-lying energy levels (ground and excited states) of 58Ni, a nucleus relevant to nuclear physics and astrophysical reactions. We aim to demonstrate that quantum computing techniques can achieve results comparable to classical methods, thus pushing the boundaries of quantum applications in nuclear physics.
+The primary goal is to calculate the low-lying energy levels (ground and excited states) of <sup>58</sup>Ni , a nucleus relevant to nuclear physics and astrophysical reactions. We aim to demonstrate that quantum computing techniques can achieve results comparable to classical methods, thus pushing the boundaries of quantum applications in nuclear physics.
 
 ## Methodology
-- **Quantum Algorithm**: We use the VQE, a hybrid quantum-classical algorithm, to minimize the energy expectation value of the 58Ni Hamiltonian and compute its ground and excited state energies.
-- **Ansatz**: The wavefunction ansatz is specifically tailored for the 58Ni nucleus to represent the desired quantum states (ground, first, and second excited states).
+- **Quantum Algorithm**: We use the VQE, a hybrid quantum-classical algorithm, to minimize the energy expectation value of the <sup>58</sup>Ni  Hamiltonian and compute its ground and excited state energies.
+- **Ansatz**: The wavefunction ansatz is specifically tailored for the <sup>58</sup>Ni  nucleus to represent the desired quantum states (ground, first, and second excited states).
 - **Qubit Mapping**: Fermionic creation and annihilation operators are mapped onto qubits using the Jordan-Wigner transformation. Each qubit corresponds to a particular nuclear state in the shell model.
 - **Optimization**: Optimization algorithms like COBYLA, SLSQP, SPSA and Gradient-Descent are used to adjust the ansatz parameters and minimize the Hamiltonian.
 
 
 ## Results
-- The VQE simulation accurately reproduces the ground state and first and second excited state energies of 58Ni.
+- The VQE simulation accurately reproduces the ground state and first and second excited state energies of <sup>58</sup>Ni .
 - Quantum results match well with classical shell model diagonalization, confirming the validity of the quantum approach.
 - The study demonstrates the potential of quantum computing in nuclear physics, particularly in nuclear structure studies.
 
@@ -51,7 +51,7 @@ The primary goal is to calculate the low-lying energy levels (ground and excited
 ## Citation
 If you use this code in your research, please cite the following paper:
 ```
-Bharti Bhoy and Paul Stevenson, "Shell-model study of 58Ni using quantum computing algorithm", New J. Phys. 26 (2024), 075001. DOI: 10.1088/1367-2630/ad5756
+Bharti Bhoy and Paul Stevenson, "Shell-model study of <sup>58</sup>Ni  using quantum computing algorithm", New J. Phys. 26 (2024), 075001. DOI: 10.1088/1367-2630/ad5756
 ```
 
 ## License
