@@ -1,4 +1,4 @@
-## Shell-model study of $^{58}\text{Ni}$ using quantum computing algorithm
+## Shell-model study of <sup>58</sup>Ni  using quantum computing algorithm
 
 authors:
   - name: Bharti Bhoy
@@ -23,13 +23,13 @@ bibliography: paper.bib
 
 ## Summary
 
-This software package implements a quantum computing approach for solving the nuclear shell model problem, focusing on the \(^{58}\)Ni nucleus. The software converts J-scheme two-body matrix elements into M-scheme matrix elements and maps nuclear orbitals onto qubits. It then uses these qubit-mapped elements to convert the Hamiltonian into the Jordan-Wigner (JW) transformation. By employing a Variational Quantum Eigensolver (VQE) with various classical optimizers, the software identifies the ground state energy and plots the corresponding wavefunction. The accuracy of the software is validated against classical shell model calculations, demonstrating its potential as a powerful tool for nuclear physics research.
+This software package implements a quantum computing approach for solving the nuclear shell model problem, focusing on the <sup>58</sup>Ni  nucleus. The software converts J-scheme two-body matrix elements into M-scheme matrix elements and maps nuclear orbitals onto qubits. It then uses these qubit-mapped elements to convert the Hamiltonian into the Jordan-Wigner (JW) transformation. By employing a Variational Quantum Eigensolver (VQE) with various classical optimizers, the software identifies the ground state energy and plots the corresponding wavefunction. The accuracy of the software is validated against classical shell model calculations, demonstrating its potential as a powerful tool for nuclear physics research.
 
 ## Statement of Need
 
 In the realm of nuclear physics, traditional computational methods often struggle with the increasing complexity of simulating larger systems, such as mid-mass nuclei. This challenge is particularly evident in the nuclear shell model, where the number of interacting particles significantly raises the computational demands, making exact solutions difficult to achieve with classical computers.
 
-The software presented in this study addresses this critical need by leveraging quantum computing to perform shell model calculations on \(^{58}\)Ni. By utilizing the Variational Quantum Eigensolver (VQE) and a problem-specific ansatz, this software provides an accurate simulation of the ground and low-lying excited states, reproducing exact energy values. This approach is scalable, versatile, and applicable to a broader range of nuclear systems, offering a new avenue for exploring nuclear structure that overcomes the limitations of classical methods.
+The software presented in this study addresses this critical need by leveraging quantum computing to perform shell model calculations on <sup>58</sup>Ni . By utilizing the Variational Quantum Eigensolver (VQE) and a problem-specific ansatz, this software provides an accurate simulation of the ground and low-lying excited states, reproducing exact energy values. This approach is scalable, versatile, and applicable to a broader range of nuclear systems, offering a new avenue for exploring nuclear structure that overcomes the limitations of classical methods.
 
 Furthermore, this software serves as a benchmark for future quantum computing applications in nuclear physics, providing a vital comparison with classical shell model calculations. As quantum hardware advances, the methods implemented here will play a key role in extending the capabilities of nuclear simulations, making this software an essential tool for the research community.
 
