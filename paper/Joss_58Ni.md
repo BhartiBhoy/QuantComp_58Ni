@@ -38,3 +38,5 @@ Furthermore, this software serves as a benchmark for future quantum computing ap
 ## Acknowledgments
 
 This work is supported by the UK STFC under the Quantum Technologies for Fundamental Physics programme, with Grant ST/W006472/1.
+
+## References
