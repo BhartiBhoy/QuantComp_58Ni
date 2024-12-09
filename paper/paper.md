@@ -11,7 +11,6 @@ authors:
     affiliation: 1
   - name: Paul Stevenson
     orcid: 0000-0003-2645-2569
-    corresponding: true  
     affiliation: 1
  
     
