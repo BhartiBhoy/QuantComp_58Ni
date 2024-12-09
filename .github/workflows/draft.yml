@@ -1,9 +1,5 @@
 name: Draft PDF
-on:
-  push:
-    paths:
-      - paper.md
-      - paper.bib
+on: [push]
 
 jobs:
   paper:
