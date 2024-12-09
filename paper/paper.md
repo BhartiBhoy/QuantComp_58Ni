@@ -17,7 +17,7 @@ authors:
 affiliations:
  - name: Department of Physics, University of Surrey, Guildford, Surrey, GU2 7XH, United Kingdom
    index: 1
-bibliography: paper/paper.bib
+bibliography: paper.bib
 
 ---
 
